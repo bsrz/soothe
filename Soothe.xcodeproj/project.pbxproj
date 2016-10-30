@@ -16,6 +16,7 @@
 		98111A371DC655AA00905480 /* InterpolateSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98111A361DC655AA00905480 /* InterpolateSourceEditorCommand.swift */; };
 		98111A3B1DC655AA00905480 /* Soothing.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 98111A2D1DC655AA00905480 /* Soothing.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		98688BAC1DC665B1005A6D13 /* AlignSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98688BAB1DC665B1005A6D13 /* AlignSourceEditorCommand.swift */; };
+		98688BAE1DC667F3005A6D13 /* SortSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98688BAD1DC667F3005A6D13 /* SortSourceEditorCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		98111A361DC655AA00905480 /* InterpolateSourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolateSourceEditorCommand.swift; sourceTree = "<group>"; };
 		98111A381DC655AA00905480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98688BAB1DC665B1005A6D13 /* AlignSourceEditorCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignSourceEditorCommand.swift; sourceTree = "<group>"; };
+		98688BAD1DC667F3005A6D13 /* SortSourceEditorCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortSourceEditorCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				98688BAB1DC665B1005A6D13 /* AlignSourceEditorCommand.swift */,
 				98111A361DC655AA00905480 /* InterpolateSourceEditorCommand.swift */,
+				98688BAD1DC667F3005A6D13 /* SortSourceEditorCommand.swift */,
 			);
 			name = Commands;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				98111A351DC655AA00905480 /* SourceEditorExtension.swift in Sources */,
 				98688BAC1DC665B1005A6D13 /* AlignSourceEditorCommand.swift in Sources */,
 				98111A371DC655AA00905480 /* InterpolateSourceEditorCommand.swift in Sources */,
+				98688BAE1DC667F3005A6D13 /* SortSourceEditorCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
