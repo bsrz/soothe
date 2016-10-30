@@ -11,7 +11,35 @@
 		98111A191DC654BE00905480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98111A181DC654BE00905480 /* ViewController.swift */; };
 		98111A1B1DC654BE00905480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98111A1A1DC654BE00905480 /* Assets.xcassets */; };
 		98111A1E1DC654BF00905480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98111A1C1DC654BF00905480 /* Main.storyboard */; };
+		98111A301DC655AA00905480 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98111A2F1DC655AA00905480 /* Cocoa.framework */; };
+		98111A351DC655AA00905480 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98111A341DC655AA00905480 /* SourceEditorExtension.swift */; };
+		98111A371DC655AA00905480 /* InterpolateSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98111A361DC655AA00905480 /* InterpolateSourceEditorCommand.swift */; };
+		98111A3B1DC655AA00905480 /* Soothing.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 98111A2D1DC655AA00905480 /* Soothing.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		98111A391DC655AA00905480 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98111A0B1DC654BE00905480 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98111A2C1DC655AA00905480;
+			remoteInfo = Soothing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		98111A3F1DC655AA00905480 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				98111A3B1DC655AA00905480 /* Soothing.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		98111A131DC654BE00905480 /* Soothe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soothe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +48,12 @@
 		98111A1A1DC654BE00905480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98111A1D1DC654BF00905480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98111A1F1DC654BF00905480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98111A2D1DC655AA00905480 /* Soothing.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Soothing.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		98111A2F1DC655AA00905480 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		98111A331DC655AA00905480 /* Soothing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Soothing.entitlements; sourceTree = "<group>"; };
+		98111A341DC655AA00905480 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		98111A361DC655AA00905480 /* InterpolateSourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolateSourceEditorCommand.swift; sourceTree = "<group>"; };
+		98111A381DC655AA00905480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +64,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		98111A2A1DC655AA00905480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98111A301DC655AA00905480 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -37,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				98111A151DC654BE00905480 /* Soothe */,
+				98111A311DC655AA00905480 /* Soothing */,
+				98111A2E1DC655AA00905480 /* Frameworks */,
 				98111A141DC654BE00905480 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				98111A131DC654BE00905480 /* Soothe.app */,
+				98111A2D1DC655AA00905480 /* Soothing.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +138,49 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
+		98111A2E1DC655AA00905480 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98111A2F1DC655AA00905480 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98111A311DC655AA00905480 /* Soothing */ = {
+			isa = PBXGroup;
+			children = (
+				98111A401DC656AC00905480 /* Source */,
+				98111A321DC655AA00905480 /* Supporting Files */,
+			);
+			path = Soothing;
+			sourceTree = "<group>";
+		};
+		98111A321DC655AA00905480 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				98111A381DC655AA00905480 /* Info.plist */,
+				98111A331DC655AA00905480 /* Soothing.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		98111A401DC656AC00905480 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				98111A341DC655AA00905480 /* SourceEditorExtension.swift */,
+				988BC6D01DC65A9100A1A771 /* Commands */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		988BC6D01DC65A9100A1A771 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				98111A361DC655AA00905480 /* InterpolateSourceEditorCommand.swift */,
+			);
+			name = Commands;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,15 +191,34 @@
 				98111A0F1DC654BE00905480 /* Sources */,
 				98111A101DC654BE00905480 /* Frameworks */,
 				98111A111DC654BE00905480 /* Resources */,
+				98111A3F1DC655AA00905480 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				98111A3A1DC655AA00905480 /* PBXTargetDependency */,
 			);
 			name = Soothe;
 			productName = Soothe;
 			productReference = 98111A131DC654BE00905480 /* Soothe.app */;
 			productType = "com.apple.product-type.application";
+		};
+		98111A2C1DC655AA00905480 /* Soothing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98111A3C1DC655AA00905480 /* Build configuration list for PBXNativeTarget "Soothing" */;
+			buildPhases = (
+				98111A291DC655AA00905480 /* Sources */,
+				98111A2A1DC655AA00905480 /* Frameworks */,
+				98111A2B1DC655AA00905480 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Soothing;
+			productName = Soothing;
+			productReference = 98111A2D1DC655AA00905480 /* Soothing.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -124,6 +231,11 @@
 				ORGANIZATIONNAME = "Berzerker IO";
 				TargetAttributes = {
 					98111A121DC654BE00905480 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 6M9MT4KJZD;
+						ProvisioningStyle = Automatic;
+					};
+					98111A2C1DC655AA00905480 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 6M9MT4KJZD;
 						ProvisioningStyle = Automatic;
@@ -144,6 +256,7 @@
 			projectRoot = "";
 			targets = (
 				98111A121DC654BE00905480 /* Soothe */,
+				98111A2C1DC655AA00905480 /* Soothing */,
 			);
 		};
 /* End PBXProject section */
@@ -155,6 +268,13 @@
 			files = (
 				98111A1B1DC654BE00905480 /* Assets.xcassets in Resources */,
 				98111A1E1DC654BF00905480 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98111A2B1DC655AA00905480 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +290,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		98111A291DC655AA00905480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98111A351DC655AA00905480 /* SourceEditorExtension.swift in Sources */,
+				98111A371DC655AA00905480 /* InterpolateSourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		98111A3A1DC655AA00905480 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98111A2C1DC655AA00905480 /* Soothing */;
+			targetProxy = 98111A391DC655AA00905480 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		98111A1C1DC654BF00905480 /* Main.storyboard */ = {
@@ -207,6 +344,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -224,12 +362,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -256,6 +395,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -267,17 +407,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		98111A231DC654BF00905480 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6M9MT4KJZD;
 				INFOPLIST_FILE = Soothe/Info.plist;
@@ -291,13 +434,47 @@
 		98111A241DC654BF00905480 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6M9MT4KJZD;
 				INFOPLIST_FILE = Soothe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.berzerker.Soothe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		98111A3D1DC655AA00905480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Soothing/Soothing.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6M9MT4KJZD;
+				INFOPLIST_FILE = Soothing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.berzerker.Soothe.Soothing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		98111A3E1DC655AA00905480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Soothing/Soothing.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6M9MT4KJZD;
+				INFOPLIST_FILE = Soothing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.berzerker.Soothe.Soothing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -319,6 +496,15 @@
 			buildConfigurations = (
 				98111A231DC654BF00905480 /* Debug */,
 				98111A241DC654BF00905480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98111A3C1DC655AA00905480 /* Build configuration list for PBXNativeTarget "Soothing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98111A3D1DC655AA00905480 /* Debug */,
+				98111A3E1DC655AA00905480 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
