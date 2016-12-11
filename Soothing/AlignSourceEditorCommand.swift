@@ -40,7 +40,12 @@ class AlignSourceEditorCommand: NSObject, XCSourceEditorCommand {
                     return 0
             }
             return result.rangeAt(1).location
-            }.max()
+        }.max()
+        
+        guard let position = alignPosition else {
+            completionHandler(nil)
+            return
+        }
         
         for index in selection.start.line ... selection.end.line {
             guard
@@ -52,7 +57,7 @@ class AlignSourceEditorCommand: NSObject, XCSourceEditorCommand {
             
             let range = result.rangeAt(2)
             if range.location != NSNotFound {
-                let repeatCount = alignPosition! - range.location + 1
+                let repeatCount = position - range.location + 1
                 if repeatCount != 0 {
                     let whiteSpaces = String(repeating: " ", count: abs(repeatCount))
                     if repeatCount > 0 {

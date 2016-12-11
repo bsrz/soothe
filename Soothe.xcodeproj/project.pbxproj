@@ -198,6 +198,7 @@
 				98111A101DC654BE00905480 /* Frameworks */,
 				98111A111DC654BE00905480 /* Resources */,
 				98111A3F1DC655AA00905480 /* Embed App Extensions */,
+				B5E859F01DFDA011006588CF /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -216,6 +217,7 @@
 				98111A291DC655AA00905480 /* Sources */,
 				98111A2A1DC655AA00905480 /* Frameworks */,
 				98111A2B1DC655AA00905480 /* Resources */,
+				B5E859F11DFDA029006588CF /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -285,6 +287,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5E859F01DFDA011006588CF /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint_version=\"`swiftlint version`\"\nif [ $swiftlint_version == $SWIFTLINT_REQUIRED_VERSION ]; then\n    swiftlint lint --path $TARGET_NAME\nelif [ $swiftlint_version != \"\" ]; then\n    echo \"HEY DEVELOPER! You have version $swiftlint_version of SwiftLint.\"\n    echo \"SwiftLint version $SWIFTLINT_REQUIRED_VERSION is required.\"\n    echo \"Please upgrade SwiftLint by running \\`brew update; brew upgrade swiftlint\\`\"\n    exit 1\nelse\n    echo \"HEY DEVELOPER! You do not have SwiftLint installed.\"\n    echo \"Please install SwiftLint by running \\`brew update; brew install swiftlint\\`\"\n    exit 1\nfi";
+		};
+		B5E859F11DFDA029006588CF /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint_version=\"`swiftlint version`\"\nif [ $swiftlint_version == $SWIFTLINT_REQUIRED_VERSION ]; then\n    swiftlint lint --path $TARGET_NAME\nelif [ $swiftlint_version != \"\" ]; then\n    echo \"HEY DEVELOPER! You have version $swiftlint_version of SwiftLint.\"\n    echo \"SwiftLint version $SWIFTLINT_REQUIRED_VERSION is required.\"\n    echo \"Please upgrade SwiftLint by running \\`brew update; brew upgrade swiftlint\\`\"\n    exit 1\nelse\n    echo \"HEY DEVELOPER! You do not have SwiftLint installed.\"\n    echo \"Please install SwiftLint by running \\`brew update; brew install swiftlint\\`\"\n    exit 1\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		98111A0F1DC654BE00905480 /* Sources */ = {
@@ -374,6 +407,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFTLINT_REQUIRED_VERSION = 0.13.2;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -418,6 +452,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFTLINT_REQUIRED_VERSION = 0.13.2;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
