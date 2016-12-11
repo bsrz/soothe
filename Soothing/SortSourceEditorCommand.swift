@@ -21,7 +21,7 @@ class SortSourceEditorCommand: NSObject, XCSourceEditorCommand {
         
         let allLines = invocation.buffer.lines.flatMap { $0 as? String }
         let lines = allLines[selection.start.line...selection.end.line].sorted()
-        let range = NSMakeRange(selection.start.line, selection.end.line - selection.start.line + 1)
+        let range = NSRange(location: selection.start.line, length: selection.end.line - selection.start.line + 1)
         invocation.buffer.lines.replaceObjects(in: range, withObjectsFrom: lines)
         completionHandler(nil)
     }

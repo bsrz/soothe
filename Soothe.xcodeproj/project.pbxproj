@@ -58,6 +58,7 @@
 		98111A381DC655AA00905480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98688BAB1DC665B1005A6D13 /* AlignSourceEditorCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignSourceEditorCommand.swift; sourceTree = "<group>"; };
 		98688BAD1DC667F3005A6D13 /* SortSourceEditorCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortSourceEditorCommand.swift; sourceTree = "<group>"; };
+		B51243D11DFDA943004B1454 /* Soothe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Soothe.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 		98111A151DC654BE00905480 /* Soothe */ = {
 			isa = PBXGroup;
 			children = (
+				B51243D11DFDA943004B1454 /* Soothe.entitlements */,
 				98111A261DC654F400905480 /* Resources */,
 				98111A281DC6550000905480 /* Source */,
 				98111A251DC654E700905480 /* Supporting Files */,
@@ -198,6 +200,7 @@
 				98111A101DC654BE00905480 /* Frameworks */,
 				98111A111DC654BE00905480 /* Resources */,
 				98111A3F1DC655AA00905480 /* Embed App Extensions */,
+				B5E859F01DFDA011006588CF /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -216,6 +219,7 @@
 				98111A291DC655AA00905480 /* Sources */,
 				98111A2A1DC655AA00905480 /* Frameworks */,
 				98111A2B1DC655AA00905480 /* Resources */,
+				B5E859F11DFDA029006588CF /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -240,6 +244,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 6M9MT4KJZD;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					98111A2C1DC655AA00905480 = {
 						CreatedOnToolsVersion = 8.1;
@@ -285,6 +294,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5E859F01DFDA011006588CF /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint_version=\"`swiftlint version`\"\nif [ $swiftlint_version == $SWIFTLINT_REQUIRED_VERSION ]; then\n    swiftlint lint --path $TARGET_NAME\nelif [ $swiftlint_version != \"\" ]; then\n    echo \"HEY DEVELOPER! You have version $swiftlint_version of SwiftLint.\"\n    echo \"SwiftLint version $SWIFTLINT_REQUIRED_VERSION is required.\"\n    echo \"Please upgrade SwiftLint by running \\`brew update; brew upgrade swiftlint\\`\"\n    exit 1\nelse\n    echo \"HEY DEVELOPER! You do not have SwiftLint installed.\"\n    echo \"Please install SwiftLint by running \\`brew update; brew install swiftlint\\`\"\n    exit 1\nfi";
+		};
+		B5E859F11DFDA029006588CF /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint_version=\"`swiftlint version`\"\nif [ $swiftlint_version == $SWIFTLINT_REQUIRED_VERSION ]; then\n    swiftlint lint --path $TARGET_NAME\nelif [ $swiftlint_version != \"\" ]; then\n    echo \"HEY DEVELOPER! You have version $swiftlint_version of SwiftLint.\"\n    echo \"SwiftLint version $SWIFTLINT_REQUIRED_VERSION is required.\"\n    echo \"Please upgrade SwiftLint by running \\`brew update; brew upgrade swiftlint\\`\"\n    exit 1\nelse\n    echo \"HEY DEVELOPER! You do not have SwiftLint installed.\"\n    echo \"Please install SwiftLint by running \\`brew update; brew install swiftlint\\`\"\n    exit 1\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		98111A0F1DC654BE00905480 /* Sources */ = {
@@ -374,6 +414,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFTLINT_REQUIRED_VERSION = 0.13.2;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -418,6 +459,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFTLINT_REQUIRED_VERSION = 0.13.2;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -428,6 +470,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Soothe/Soothe.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6M9MT4KJZD;
@@ -446,6 +489,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Soothe/Soothe.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6M9MT4KJZD;
