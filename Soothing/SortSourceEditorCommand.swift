@@ -1,17 +1,9 @@
-//
-//  SortSourceEditorCommand.swift
-//  Soothe
-//
-//  Created by Benoit Sarrazin on 2016-10-30.
-//  Copyright © 2016 Berzerker IO. All rights reserved.
-//
-
 import Foundation
 import XcodeKit
 
 class SortSourceEditorCommand: NSObject, XCSourceEditorCommand {
     
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) {
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
             let userInfo = [NSLocalizedDescriptionKey: "This extension only works with a selection."]
             let error = NSError(domain: "\(#file) -> \(#function)", code: #line, userInfo: userInfo)

@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Soothe
-//
-//  Created by Ben Sarrazin on 2016-12-29.
-//  Copyright © 2016 Berzerker IO. All rights reserved.
-//
-
 import Cocoa
 
 class ViewController: NSViewController {
@@ -26,21 +18,25 @@ class ViewController: NSViewController {
     // MARK: - Actions
     
     @IBAction func leftButtonClicked(_ sender: NSButton) {
-        guard leadingLayoutConstraint.constant < 0 else {
-            return
+        guard leadingLayoutConstraint.constant < 0 else { return }
+        let changes = { (context: NSAnimationContext) in
+            self.leadingLayoutConstraint.animator().constant += self.view.frame.width
         }
-        NSAnimationContext.runAnimationGroup({ _ in
-            leadingLayoutConstraint.animator().constant += view.frame.width
-        }) { self.updateUserInterface() }
+        let completion = {
+            self.updateUserInterface()
+        }
+        NSAnimationContext.runAnimationGroup(changes, completionHandler: completion)
     }
     
     @IBAction func rightButtonClicked(_ sender: NSButton) {
-        guard leadingLayoutConstraint.constant >= -(3 * view.frame.width) else {
-            return
-        }
-        NSAnimationContext.runAnimationGroup({ _ in
+        guard leadingLayoutConstraint.constant >= -(3 * view.frame.width) else { return }
+        let changes = { (context: NSAnimationContext) in
             self.leadingLayoutConstraint.animator().constant -= self.view.frame.width
-        }) { self.updateUserInterface() }
+        }
+        let completion = {
+            self.updateUserInterface()
+        }
+        NSAnimationContext.runAnimationGroup(changes, completionHandler: completion)
     }
     
     // MARK: - User Interface

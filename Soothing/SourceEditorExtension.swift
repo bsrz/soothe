@@ -1,11 +1,3 @@
-//
-//  SourceEditorExtension.swift
-//  Soothing
-//
-//  Created by Benoit Sarrazin on 2016-10-30.
-//  Copyright © 2016 Berzerker IO. All rights reserved.
-//
-
 import Foundation
 import XcodeKit
 

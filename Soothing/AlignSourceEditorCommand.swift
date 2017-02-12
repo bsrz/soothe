@@ -1,17 +1,9 @@
-//
-//  AlignSourceEditorCommand.swift
-//  Soothe
-//
-//  Created by Benoit Sarrazin on 2016-10-30.
-//  Copyright © 2016 Berzerker IO. All rights reserved.
-//
-
 import Foundation
 import XcodeKit
 
 class AlignSourceEditorCommand: NSObject, XCSourceEditorCommand {
     
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) {
         
         // [BS] Oct 30, 2016
         // Credit for this extension goes to https://github.com/tid-kijyun/XcodeSourceEditorExtension-Alignment

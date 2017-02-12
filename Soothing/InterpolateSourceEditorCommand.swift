@@ -1,17 +1,9 @@
-//
-//  InterpolateSourceEditorCommand.swift
-//  Soothing
-//
-//  Created by Benoit Sarrazin on 2016-10-30.
-//  Copyright © 2016 Berzerker IO. All rights reserved.
-//
-
 import Foundation
 import XcodeKit
 
 class InterpolateSourceEditorCommand: NSObject, XCSourceEditorCommand {
     
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) {
         let range = invocation.buffer.selections.firstObject as? XCSourceTextRange
         guard
             let start = range?.start,
