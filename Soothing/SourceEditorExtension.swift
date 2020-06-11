@@ -2,12 +2,8 @@ import Foundation
 import XcodeKit
 
 class SourceEditorExtension: NSObject, XCSourceEditorExtension {
-    
-    func extensionDidFinishLaunching() {
-        print(#function)
-        // If your extension needs to do any work at launch, implement this optional method.
-    }
-    
+
+    // MARK: - Properties
     var commandDefinitions: [[XCSourceEditorCommandDefinitionKey: Any]] {
         return [
             [
@@ -27,5 +23,9 @@ class SourceEditorExtension: NSObject, XCSourceEditorExtension {
             ]
         ]
     }
-    
+
+    // MARK: - Lifecycle
+    func extensionDidFinishLaunching() {
+        print(#function)
+    }
 }

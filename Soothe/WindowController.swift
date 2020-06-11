@@ -1,9 +1,3 @@
 import Cocoa
 
-class WindowController: NSWindowController {
-    
-    override func windowDidLoad() {
-        super.windowDidLoad()
-    }
-    
-}
+class WindowController: NSWindowController { }

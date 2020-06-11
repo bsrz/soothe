@@ -2,7 +2,7 @@ import Foundation
 import XcodeKit
 
 class InterpolateSourceEditorCommand: NSObject, XCSourceEditorCommand {
-    
+
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) {
         let range = invocation.buffer.selections.firstObject as? XCSourceTextRange
         guard
@@ -14,18 +14,16 @@ class InterpolateSourceEditorCommand: NSObject, XCSourceEditorCommand {
             else {
                 let userInfo = [NSLocalizedDescriptionKey: "This extension works only with a single selection, on a single line."]
                 let error = NSError(domain: #function, code: #line, userInfo: userInfo)
-                completionHandler(error)
-                return
-        }
-        
+                return completionHandler(error)
+            }
+
         let endIndex = line.index(line.startIndex, offsetBy: end.column)
         line.insert(")", at: endIndex)
-        
+
         let startIndex = line.index(line.startIndex, offsetBy: start.column)
         line.insert(contentsOf: ["\\", "("], at: startIndex)
-        
+
         invocation.buffer.lines.replaceObject(at: start.line, with: line)
         completionHandler(nil)
     }
-    
 }
