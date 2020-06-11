@@ -18,7 +18,6 @@
 		98688BAC1DC665B1005A6D13 /* AlignSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98688BAB1DC665B1005A6D13 /* AlignSourceEditorCommand.swift */; };
 		98688BAE1DC667F3005A6D13 /* SortSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98688BAD1DC667F3005A6D13 /* SortSourceEditorCommand.swift */; };
 		B506F2DB1E1573D6008556A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506F2DA1E1573D6008556A8 /* ViewController.swift */; };
-		B59800E71E17FE4B00AFD725 /* chicken-nick.gif in Resources */ = {isa = PBXBuildFile; fileRef = B59800E61E17FE4B00AFD725 /* chicken-nick.gif */; };
 		B59800EB1E1810FA00AFD725 /* align.gif in Resources */ = {isa = PBXBuildFile; fileRef = B59800E81E1810FA00AFD725 /* align.gif */; };
 		B59800EC1E1810FA00AFD725 /* interpolate.gif in Resources */ = {isa = PBXBuildFile; fileRef = B59800E91E1810FA00AFD725 /* interpolate.gif */; };
 		B59800ED1E1810FA00AFD725 /* sort.gif in Resources */ = {isa = PBXBuildFile; fileRef = B59800EA1E1810FA00AFD725 /* sort.gif */; };
@@ -65,7 +64,6 @@
 		98688BAD1DC667F3005A6D13 /* SortSourceEditorCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortSourceEditorCommand.swift; sourceTree = "<group>"; };
 		B506F2DA1E1573D6008556A8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B51243D11DFDA943004B1454 /* Soothe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Soothe.entitlements; sourceTree = "<group>"; };
-		B59800E61E17FE4B00AFD725 /* chicken-nick.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "chicken-nick.gif"; sourceTree = "<group>"; };
 		B59800E81E1810FA00AFD725 /* align.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = align.gif; sourceTree = "<group>"; };
 		B59800E91E1810FA00AFD725 /* interpolate.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = interpolate.gif; sourceTree = "<group>"; };
 		B59800EA1E1810FA00AFD725 /* sort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sort.gif; sourceTree = "<group>"; };
@@ -112,47 +110,11 @@
 		98111A151DC654BE00905480 /* Soothe */ = {
 			isa = PBXGroup;
 			children = (
-				98111A261DC654F400905480 /* Resources */,
-				98111A281DC6550000905480 /* Source */,
-				98111A251DC654E700905480 /* Supporting Files */,
+				D10947252492C1F700585991 /* Resources */,
+				D10947282492C26800585991 /* Source */,
+				D10947272492C23800585991 /* Supporting Files */,
 			);
 			path = Soothe;
-			sourceTree = "<group>";
-		};
-		98111A251DC654E700905480 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				98111A1F1DC654BF00905480 /* Info.plist */,
-				B51243D11DFDA943004B1454 /* Soothe.entitlements */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		98111A261DC654F400905480 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B59800E51E17FE0E00AFD725 /* Animated Images */,
-				98111A1A1DC654BE00905480 /* Assets.xcassets */,
-				98111A1C1DC654BF00905480 /* Main.storyboard */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		98111A271DC654FA00905480 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				B506F2DA1E1573D6008556A8 /* ViewController.swift */,
-			);
-			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		98111A281DC6550000905480 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				98111A161DC654BE00905480 /* AppDelegate.swift */,
-				B59800E41E17F9F000AFD725 /* Window Controllers */,
-			);
-			name = Source;
 			sourceTree = "<group>";
 		};
 		98111A2E1DC655AA00905480 /* Frameworks */ = {
@@ -166,58 +128,85 @@
 		98111A311DC655AA00905480 /* Soothing */ = {
 			isa = PBXGroup;
 			children = (
-				98111A401DC656AC00905480 /* Source */,
-				98111A321DC655AA00905480 /* Supporting Files */,
+				D10947222492C17D00585991 /* Source */,
+				D10947242492C1AD00585991 /* Supporting Files */,
 			);
 			path = Soothing;
 			sourceTree = "<group>";
 		};
-		98111A321DC655AA00905480 /* Supporting Files */ = {
+		D10947222492C17D00585991 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				98111A381DC655AA00905480 /* Info.plist */,
-				98111A331DC655AA00905480 /* Soothing.entitlements */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		98111A401DC656AC00905480 /* Source */ = {
-			isa = PBXGroup;
-			children = (
+				D10947232492C18900585991 /* Commands */,
 				98111A341DC655AA00905480 /* SourceEditorExtension.swift */,
-				988BC6D01DC65A9100A1A771 /* Commands */,
 			);
-			name = Source;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		988BC6D01DC65A9100A1A771 /* Commands */ = {
+		D10947232492C18900585991 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
 				98688BAB1DC665B1005A6D13 /* AlignSourceEditorCommand.swift */,
 				98111A361DC655AA00905480 /* InterpolateSourceEditorCommand.swift */,
 				98688BAD1DC667F3005A6D13 /* SortSourceEditorCommand.swift */,
 			);
-			name = Commands;
+			path = Commands;
 			sourceTree = "<group>";
 		};
-		B59800E41E17F9F000AFD725 /* Window Controllers */ = {
+		D10947242492C1AD00585991 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				98111A181DC654BE00905480 /* WindowController.swift */,
-				98111A271DC654FA00905480 /* View Controllers */,
+				98111A381DC655AA00905480 /* Info.plist */,
+				98111A331DC655AA00905480 /* Soothing.entitlements */,
 			);
-			name = "Window Controllers";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B59800E51E17FE0E00AFD725 /* Animated Images */ = {
+		D10947252492C1F700585991 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D10947262492C20800585991 /* GIFs */,
+				98111A1A1DC654BE00905480 /* Assets.xcassets */,
+				98111A1C1DC654BF00905480 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D10947262492C20800585991 /* GIFs */ = {
 			isa = PBXGroup;
 			children = (
 				B59800E81E1810FA00AFD725 /* align.gif */,
 				B59800E91E1810FA00AFD725 /* interpolate.gif */,
 				B59800EA1E1810FA00AFD725 /* sort.gif */,
-				B59800E61E17FE4B00AFD725 /* chicken-nick.gif */,
 			);
-			name = "Animated Images";
+			path = GIFs;
+			sourceTree = "<group>";
+		};
+		D10947272492C23800585991 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				98111A1F1DC654BF00905480 /* Info.plist */,
+				B51243D11DFDA943004B1454 /* Soothe.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D10947282492C26800585991 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D10947292492C27000585991 /* Controllers */,
+				98111A161DC654BE00905480 /* AppDelegate.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D10947292492C27000585991 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B506F2DA1E1573D6008556A8 /* ViewController.swift */,
+				98111A181DC654BE00905480 /* WindowController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +304,6 @@
 				98111A1B1DC654BE00905480 /* Assets.xcassets in Resources */,
 				98111A1E1DC654BF00905480 /* Main.storyboard in Resources */,
 				B59800ED1E1810FA00AFD725 /* sort.gif in Resources */,
-				B59800E71E17FE4B00AFD725 /* chicken-nick.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,12 +483,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Soothe/Soothe.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Soothe/Supporting Files/Soothe.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6M9MT4KJZD;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Soothe/Info.plist;
+				INFOPLIST_FILE = "Soothe/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.berzerker.Soothe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,12 +502,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Soothe/Soothe.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Soothe/Supporting Files/Soothe.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6M9MT4KJZD;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Soothe/Info.plist;
+				INFOPLIST_FILE = "Soothe/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.berzerker.Soothe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -531,12 +519,12 @@
 		98111A3D1DC655AA00905480 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Soothing/Soothing.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Soothing/Supporting Files/Soothing.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6M9MT4KJZD;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Soothing/Info.plist;
+				INFOPLIST_FILE = "Soothing/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.berzerker.Soothe.Soothing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -547,12 +535,12 @@
 		98111A3E1DC655AA00905480 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Soothing/Soothing.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Soothing/Supporting Files/Soothing.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6M9MT4KJZD;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Soothing/Info.plist;
+				INFOPLIST_FILE = "Soothing/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.berzerker.Soothe.Soothing;
 				PRODUCT_NAME = "$(TARGET_NAME)";

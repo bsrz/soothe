@@ -25,7 +25,7 @@ class ViewController: NSViewController {
         NSAnimationContext.runAnimationGroup(changes) { self.updateUserInterface() }
     }
     @IBAction func rightButtonClicked(_ sender: NSButton) {
-        guard leadingLayoutConstraint.constant >= -(3 * view.frame.width)
+        guard leadingLayoutConstraint.constant >= -(2 * view.frame.width)
             else { return }
 
         let changes = { (context: NSAnimationContext) in
@@ -37,6 +37,6 @@ class ViewController: NSViewController {
     // MARK: - User Interface
     private func updateUserInterface() {
         leftButton.isHidden = leadingLayoutConstraint.constant == 0
-        rightButton.isHidden = leadingLayoutConstraint.constant == -(3 * view.frame.width)
+        rightButton.isHidden = leadingLayoutConstraint.constant == -(2 * view.frame.width)
     }
 }

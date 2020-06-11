@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="gqx-Wv-DHP">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="gqx-Wv-DHP">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -602,7 +600,7 @@
                                         <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
-                                                <action selector="toggleSourceList:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
+                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
@@ -666,11 +664,14 @@
         <scene sceneID="UxT-ke-6fC">
             <objects>
                 <windowController storyboardIdentifier="WindowController" id="gqx-Wv-DHP" customClass="WindowController" customModule="Soothe" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Soothe" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="wba-n8-AXO">
+                    <window key="window" title="Soothe" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" id="wba-n8-AXO">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="604" y="461" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="3440" height="1417"/>
+                        <connections>
+                            <outlet property="delegate" destination="gqx-Wv-DHP" id="meD-Xm-q9u"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="tmR-eX-MST" kind="relationship" relationship="window.shadowedContentViewController" id="NQo-cJ-hiU"/>
@@ -685,13 +686,13 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="tmR-eX-MST" customClass="ViewController" customModule="Soothe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="JGY-ah-ebb">
-                        <rect key="frame" x="0.0" y="0.0" width="958" height="689"/>
+                        <rect key="frame" x="0.0" y="0.0" width="960" height="689"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box title="Aligning all equal signs..." translatesAutoresizingMaskIntoConstraints="NO" id="AoS-kX-bW2">
-                                <rect key="frame" x="-3" y="-4" width="964" height="693"/>
+                                <rect key="frame" x="-3" y="-4" width="966" height="693"/>
                                 <view key="contentView" id="kem-ah-amG">
-                                    <rect key="frame" x="2" y="2" width="960" height="662"/>
+                                    <rect key="frame" x="3" y="3" width="960" height="662"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5fV-wd-c9i">
@@ -709,9 +710,9 @@
                                 <font key="titleFont" metaFont="systemBold" size="22"/>
                             </box>
                             <box title="Interpolating values in place..." translatesAutoresizingMaskIntoConstraints="NO" id="aUC-gV-KFr">
-                                <rect key="frame" x="956" y="-4" width="964" height="693"/>
+                                <rect key="frame" x="957" y="-4" width="966" height="693"/>
                                 <view key="contentView" id="kSt-kY-sxU">
-                                    <rect key="frame" x="2" y="2" width="960" height="662"/>
+                                    <rect key="frame" x="3" y="3" width="960" height="662"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="beU-90-e43">
@@ -729,9 +730,9 @@
                                 <font key="titleFont" metaFont="systemBold" size="22"/>
                             </box>
                             <box title="Sorting lines..." translatesAutoresizingMaskIntoConstraints="NO" id="JRJ-DL-qwH">
-                                <rect key="frame" x="1915" y="-4" width="964" height="693"/>
+                                <rect key="frame" x="1917" y="-4" width="966" height="693"/>
                                 <view key="contentView" id="fDO-9x-i0V">
-                                    <rect key="frame" x="2" y="2" width="960" height="662"/>
+                                    <rect key="frame" x="3" y="3" width="960" height="662"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yqj-1c-97e">
@@ -744,26 +745,6 @@
                                         <constraint firstAttribute="bottom" secondItem="yqj-1c-97e" secondAttribute="bottom" id="dez-5A-tAG"/>
                                         <constraint firstAttribute="trailing" secondItem="yqj-1c-97e" secondAttribute="trailing" id="e0l-GG-lMg"/>
                                         <constraint firstItem="yqj-1c-97e" firstAttribute="top" secondItem="fDO-9x-i0V" secondAttribute="top" id="fo3-gB-e6h"/>
-                                    </constraints>
-                                </view>
-                                <font key="titleFont" metaFont="systemBold" size="22"/>
-                            </box>
-                            <box title="Chicken Nick" transparent="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Si-0K-19L">
-                                <rect key="frame" x="2873" y="-4" width="964" height="693"/>
-                                <view key="contentView" id="4uc-AR-J4Q">
-                                    <rect key="frame" x="2" y="2" width="960" height="662"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wK1-eP-wjh">
-                                            <rect key="frame" x="0.0" y="0.0" width="960" height="662"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="chicken-nick" id="3sS-iU-HOv"/>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="wK1-eP-wjh" firstAttribute="leading" secondItem="4uc-AR-J4Q" secondAttribute="leading" id="BEk-UI-3bk"/>
-                                        <constraint firstAttribute="trailing" secondItem="wK1-eP-wjh" secondAttribute="trailing" id="Ls2-Fp-Kb7"/>
-                                        <constraint firstItem="wK1-eP-wjh" firstAttribute="top" secondItem="4uc-AR-J4Q" secondAttribute="top" id="NIb-AG-OTX"/>
-                                        <constraint firstAttribute="bottom" secondItem="wK1-eP-wjh" secondAttribute="bottom" id="v8T-2B-oWB"/>
                                     </constraints>
                                 </view>
                                 <font key="titleFont" metaFont="systemBold" size="22"/>
@@ -783,7 +764,7 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="xj1-Ik-aO4">
-                                <rect key="frame" x="913" y="20" width="25" height="25"/>
+                                <rect key="frame" x="915" y="20" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="avz-gr-ayF"/>
                                     <constraint firstAttribute="width" secondItem="xj1-Ik-aO4" secondAttribute="height" multiplier="1:1" id="dd6-tK-0F6"/>
@@ -801,16 +782,12 @@
                             <constraint firstItem="AoS-kX-bW2" firstAttribute="width" secondItem="JGY-ah-ebb" secondAttribute="width" id="0D7-b6-9Su"/>
                             <constraint firstItem="aUC-gV-KFr" firstAttribute="width" secondItem="JGY-ah-ebb" secondAttribute="width" id="3uh-aR-tHY"/>
                             <constraint firstItem="JRJ-DL-qwH" firstAttribute="width" secondItem="JGY-ah-ebb" secondAttribute="width" id="436-6f-UZE"/>
-                            <constraint firstItem="1Si-0K-19L" firstAttribute="width" secondItem="JGY-ah-ebb" secondAttribute="width" id="5nM-EL-bEG"/>
                             <constraint firstItem="JRJ-DL-qwH" firstAttribute="leading" secondItem="kSt-kY-sxU" secondAttribute="trailing" id="68x-bn-WEY"/>
                             <constraint firstItem="JRJ-DL-qwH" firstAttribute="centerY" secondItem="JGY-ah-ebb" secondAttribute="centerY" id="6ic-pc-JFt"/>
-                            <constraint firstItem="JRJ-DL-qwH" firstAttribute="trailing" secondItem="1Si-0K-19L" secondAttribute="leading" id="IRT-tg-0QP"/>
                             <constraint firstItem="JRJ-DL-qwH" firstAttribute="height" secondItem="JGY-ah-ebb" secondAttribute="height" id="PXS-av-f93"/>
                             <constraint firstAttribute="trailing" secondItem="xj1-Ik-aO4" secondAttribute="trailing" constant="20" symbolic="YES" id="QKC-lO-Qqr"/>
-                            <constraint firstItem="1Si-0K-19L" firstAttribute="height" secondItem="JGY-ah-ebb" secondAttribute="height" id="QMM-2x-5VU"/>
                             <constraint firstItem="aUC-gV-KFr" firstAttribute="centerY" secondItem="JGY-ah-ebb" secondAttribute="centerY" id="UUi-oq-QRv"/>
                             <constraint firstItem="AoS-kX-bW2" firstAttribute="centerY" secondItem="JGY-ah-ebb" secondAttribute="centerY" id="XBM-3X-Vmj"/>
-                            <constraint firstItem="1Si-0K-19L" firstAttribute="centerY" secondItem="JGY-ah-ebb" secondAttribute="centerY" id="gMe-JN-Jn8"/>
                             <constraint firstItem="aUC-gV-KFr" firstAttribute="leading" secondItem="kem-ah-amG" secondAttribute="trailing" id="koq-u1-TI8"/>
                             <constraint firstAttribute="bottom" secondItem="jYW-ux-Zcj" secondAttribute="bottom" constant="20" symbolic="YES" id="mkF-h3-QoZ"/>
                             <constraint firstItem="AoS-kX-bW2" firstAttribute="leading" secondItem="JGY-ah-ebb" secondAttribute="leading" id="nu7-sq-Nmp"/>
@@ -835,7 +812,6 @@
         <image name="align" width="960" height="652"/>
         <image name="button-left" width="25" height="25"/>
         <image name="button-right" width="25" height="25"/>
-        <image name="chicken-nick" width="360" height="480"/>
         <image name="interpolate" width="960" height="652"/>
         <image name="sort" width="960" height="652"/>
     </resources>
