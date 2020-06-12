@@ -7,10 +7,10 @@ class InterpolateSourceEditorCommand: NSObject, XCSourceEditorCommand {
         guard
             let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange,
             var line = invocation.buffer.lines[selection.start.line] as? String
-            else { return completionHandler(InterpolateError.noSelection) }
+            else { return completionHandler(SelectionError.none) }
 
         guard selection.start.line == selection.end.line else {
-            return completionHandler(InterpolateError.multilineSelection)
+            return completionHandler(SelectionError.multi)
         }
 
         line.insert(")", at: line.index(line.startIndex, offsetBy: selection.end.column))
@@ -22,17 +22,5 @@ class InterpolateSourceEditorCommand: NSObject, XCSourceEditorCommand {
         selection.end.column += 2
 
         completionHandler(nil)
-    }
-}
-
-enum InterpolateError: Error {
-    case noSelection
-    case multilineSelection
-
-    var localizedDescription: String {
-        switch self {
-        case .noSelection: return "This command only works when you have a single text selection."
-        case .multilineSelection: return "This command only works when you have a single text selection."
-        }
     }
 }

@@ -21,6 +21,7 @@
 		B59800EB1E1810FA00AFD725 /* align.gif in Resources */ = {isa = PBXBuildFile; fileRef = B59800E81E1810FA00AFD725 /* align.gif */; };
 		B59800EC1E1810FA00AFD725 /* interpolate.gif in Resources */ = {isa = PBXBuildFile; fileRef = B59800E91E1810FA00AFD725 /* interpolate.gif */; };
 		B59800ED1E1810FA00AFD725 /* sort.gif in Resources */ = {isa = PBXBuildFile; fileRef = B59800EA1E1810FA00AFD725 /* sort.gif */; };
+		D109472C2492DF8900585991 /* SelectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109472B2492DF8900585991 /* SelectionError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		B59800E81E1810FA00AFD725 /* align.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = align.gif; sourceTree = "<group>"; };
 		B59800E91E1810FA00AFD725 /* interpolate.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = interpolate.gif; sourceTree = "<group>"; };
 		B59800EA1E1810FA00AFD725 /* sort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sort.gif; sourceTree = "<group>"; };
+		D109472B2492DF8900585991 /* SelectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		D10947222492C17D00585991 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D109472A2492DF7100585991 /* Errors */,
 				D10947232492C18900585991 /* Commands */,
 				98111A341DC655AA00905480 /* SourceEditorExtension.swift */,
 			);
@@ -207,6 +210,14 @@
 				98111A181DC654BE00905480 /* WindowController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D109472A2492DF7100585991 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				D109472B2492DF8900585991 /* SelectionError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +346,7 @@
 				98688BAC1DC665B1005A6D13 /* AlignSourceEditorCommand.swift in Sources */,
 				98111A371DC655AA00905480 /* InterpolateSourceEditorCommand.swift in Sources */,
 				98688BAE1DC667F3005A6D13 /* SortSourceEditorCommand.swift in Sources */,
+				D109472C2492DF8900585991 /* SelectionError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
