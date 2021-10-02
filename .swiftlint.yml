@@ -1,95 +1,248 @@
-disabled_rules: # rule identifiers to exclude from running
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Configuration
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+disabled_rules:
+  # - block_based_kvo
   # - class_delegate_protocol
   # - closing_brace
   # - closure_parameter_position
   # - colon
   # - comma
+  # - comment_spacing
   # - compiler_protocol_init
+  # - computed_accessors_order
   # - control_statement
   # - custom_rules
   # - cyclomatic_complexity
+  # - deployment_target
+  # - discouraged_direct_init
+  # - duplicate_enum_cases
+  # - duplicate_imports
   # - dynamic_inline
+  # - empty_enum_arguments
   # - empty_parameters
   # - empty_parentheses_with_trailing_closure
   # - file_length
-  # - force_cast
-  # - force_try
+  # - for_where
+  - force_cast
+  - force_try
   # - function_body_length
   # - function_parameter_count
   # - generic_type_name
+  # - identifier_name
   # - implicit_getter
+  # - inclusive_language
+  # - inert_defer
+  # - is_disjoint
   # - large_tuple
   # - leading_whitespace
   # - legacy_cggeometry_functions
   # - legacy_constant
   # - legacy_constructor
+  # - legacy_hashing
   # - legacy_nsgeometry_functions
-  # - line_length
+  - line_length
   # - mark
-  # - nesting
+  # - multiple_closures_with_trailing_closure
+  - nesting
+  # - no_fallthrough_only
+  # - no_space_in_method_call
+  # - notification_center_detachment
+  # - nsobject_prefer_isequal
   # - opening_brace
-  # - operator_whitespace
+  - operator_whitespace
+  # - orphaned_doc_comment
+  # - private_over_fileprivate
   # - private_unit_test
+  # - protocol_property_accessors_order
+  # - reduce_boolean
+  # - redundant_discardable_let
+  # - redundant_objc_attribute
   # - redundant_optional_initialization
+  # - redundant_set_access_control
   # - redundant_string_enum_value
   # - redundant_void_return
   # - return_arrow_whitespace
   # - shorthand_operator
   # - statement_position
+  # - superfluous_disable_command
+  # - switch_case_alignment
   # - syntactic_sugar
   # - todo
   # - trailing_comma
   # - trailing_newline
   # - trailing_semicolon
-  - trailing_whitespace
+  # - trailing_whitespace
   # - type_body_length
   # - type_name
+  # - unneeded_break_in_switch
+  # - unused_capture_list
   # - unused_closure_parameter
+  # - unused_control_flow_label
   # - unused_enumerated
   # - unused_optional_binding
-  # - valid_docs
+  # - unused_setter_value
   # - valid_ibinspectable
-  # - variable_name
   # - vertical_parameter_alignment
   # - vertical_whitespace
   # - void_return
   # - weak_delegate
-opt_in_rules: # some rules are only opt-in
-  - attributes
+  # - xctfail_message
+
+opt_in_rules:
+  - anyobject_protocol
+  - array_init
+  # - attributes ###
+  - balanced_xctest_lifecycle
+  - capture_variable
+  # - closure_body_length ###
   - closure_end_indentation
   - closure_spacing
-  # - conditional_returns_on_newline
+  - collection_alignment
+  # - conditional_returns_on_newline ###
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
+  - convenience_type
+  - discarded_notification_center_observer
+  - discouraged_assert
+  - discouraged_object_literal
+  - discouraged_optional_boolean
+  - discouraged_optional_collection
+  - empty_collection_literal
   - empty_count
+  - empty_string
+  - empty_xctest_method
+  - enum_case_associated_values_count
+  - expiring_todo
+  # - explicit_acl ###
+  # - explicit_enum_raw_value ###
   - explicit_init
+  - explicit_self
+  # - explicit_top_level_acl ###
+  # - explicit_type_interface ###
+  # - extension_access_modifier ###
+  - fallthrough
+  - fatal_error_message
   - file_header
+  - file_name
+  - file_name_no_space
+  # - file_types_order ###
   - first_where
-  - force_unwrapping
-  - missing_docs
+  - flatmap_over_map_reduce
+  # - force_unwrapping ###
+  # - function_default_parameter_at_end ###
+  - ibinspectable_in_extension
+  - identical_operands
+  # - implicit_return ###
+  # - implicitly_unwrapped_optional ###
+  - indentation_width
+  - joined_default_parameter
+  - last_where
+  - legacy_multiple
+  - legacy_objc_type
+  - legacy_random
+  - let_var_whitespace
+  - literal_expression_end_indentation
+  - lower_acl_than_parent
+  # - missing_docs ###
+  - modifier_order
+  - multiline_arguments
+  - multiline_arguments_brackets
+  - multiline_function_chains
+  - multiline_literal_brackets
+  - multiline_parameters
+  - multiline_parameters_brackets
   - nimble_operator
+  # - no_extension_access_modifier ###
+  # - no_grouping_extension ###
+  - nslocalizedstring_key
+  - nslocalizedstring_require_bundle
   - number_separator
-  - object_literal
+  # - object_literal ###
   - operator_usage_whitespace
+  # - optional_enum_case_matching ###
   - overridden_super_call
+  - override_in_extension
+  # - pattern_matching_keywords ###
+  # - prefer_nimble ###
+  - prefer_self_type_over_type_of_self
+  - prefer_zero_over_explicit_init
+  # - prefixed_toplevel_constant ###
+  - private_action
   - private_outlet
+  - private_subject
+  # - prohibited_interface_builder ###
   - prohibited_super_call
+  - quick_discouraged_call
+  - quick_discouraged_focused_test
+  - quick_discouraged_pending_test
+  - raw_value_for_camel_cased_codable_enum
+  - reduce_into
   - redundant_nil_coalescing
+  - redundant_type_annotation
+  # - required_deinit ###
+  - required_enum_case
+  - single_test_class
+  - sorted_first_last
   - sorted_imports
-  - switch_case_on_newline
-included: # paths to include during linting. `--path` is ignored if present.
-  # - App
-  # - AppTests
-  # - AppUITests
-excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - Carthage
-  - Pods
+  - static_operator
+  - strict_fileprivate
+  - strong_iboutlet
+  # - switch_case_on_newline ###
+  - test_case_accessibility
+  - toggle_bool
+  - trailing_closure
+  # - type_contents_order ###
+  - unavailable_function
+  - unneeded_parentheses_in_closure_argument
+  # - unowned_variable_capture ###
+  # - untyped_error_in_catch ###
+  - unused_declaration
+  - unused_import
+  - vertical_parameter_alignment_on_call
+  - vertical_whitespace_between_cases
+  - vertical_whitespace_closing_braces
+  # - vertical_whitespace_opening_braces ###
+  # - xct_specific_matcher ###
+  - yoda_condition
 
-# Custom Configuration
+included:
+  - Soothe
+  - Soothing
+  - SoothingKit
+  - SoothingKitTests
 
-line_length:
-  warning: 150
-  error: 175
+# excluded:
 
-variable_name:
-  excluded:
-    - ID
-    - id
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Customization
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cyclomatic_complexity:
+  ignores_case_statements: true
+
+identifier_name:
+  excluded: [
+    'by', 'fb', 'from', 'hh', 'h1', 'h2', 'i', 'id', 'in',
+    'mm', 'nb', 'no', 'of', 'ok', 'on', 'op', 'r', 'ss',
+    'to', 'tz', 'us', 'vc', 'with', 'x', 'y'
+  ]
+
+indentation_width:
+ include_comments: false
+
+number_separator:
+  minimum_length: 5
+
+private_outlet:
+  allow_private_set: true
+
+trailing_whitespace:
+  ignores_empty_lines: true
+
+type_name:
+  excluded: ['T']
+  max_length:
+    warning: 50
+    error: 50
