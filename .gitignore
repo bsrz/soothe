@@ -21,3 +21,7 @@ DerivedData
 # Dependencies
 Carthage/
 Pods/
+
+# Others
+.bundle/
+fastlane/report.xml

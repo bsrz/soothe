@@ -1,0 +1,29 @@
+default_platform(:mac)
+fastlane_version('2.195.0')
+
+platform :mac do
+
+  # --------------------------------------------------
+  # Set Up & Tear Down
+  # --------------------------------------------------
+
+  before_all do |lane, options|
+  end
+
+  after_all do |lane, options|
+  end
+
+  # --------------------------------------------------
+  # Lanes
+  # --------------------------------------------------
+
+  import 'lanes/installing.rb'
+
+  # --------------------------------------------------
+  # Error Handling
+  # --------------------------------------------------
+
+  error do |lane, exception, options|
+  end
+
+end

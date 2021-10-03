@@ -1,0 +1,5 @@
+app_identifier 'io.berzerker.Soothe'
+git_branch 'main'
+git_url 'git@github.com:bsarrazin/developer.apple.com.git'
+platform 'macos'
+type 'development'
