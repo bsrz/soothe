@@ -80,6 +80,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D143792D27B80F1700A34383 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
 		D15D23DE27053EFE0081E3A6 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		D15D23DF27053EFE0081E3A6 /* TextSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSelection.swift; sourceTree = "<group>"; };
 		D15D23E027053EFE0081E3A6 /* SelectionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionError.swift; sourceTree = "<group>"; };
@@ -218,6 +219,7 @@
 		D17B35F5270417AA001EB57E = {
 			isa = PBXGroup;
 			children = (
+				D143792D27B80F1700A34383 /* Modules */,
 				D17B3600270417AA001EB57E /* Soothe */,
 				D17B3612270417AC001EB57E /* SootheTests */,
 				D17B361C270417AC001EB57E /* SootheUITests */,

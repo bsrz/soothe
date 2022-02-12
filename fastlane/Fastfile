@@ -1,5 +1,5 @@
 default_platform(:mac)
-fastlane_version('2.195.0')
+fastlane_version('2.204.3')
 
 platform :mac do
 
